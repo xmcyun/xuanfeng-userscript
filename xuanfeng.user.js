@@ -696,7 +696,7 @@ var elements    = $rpc.find('form:first').get(0).elements
 
 
 pop.showConfig = function (config) {
-    url.value = config.url || ''
+    url.value = config.url || 'http://192.168.1.1:6800/jsonrpc'
     user.value = config.user || ''
     pass.value = config.pass || ''
     this.show()
