@@ -134,7 +134,7 @@ $rpc.click(function (evt) {
             })
         } else {
             msg.show('rpc未设置', 3, 2000)
-            g_pop_rpc.showConfig('http://localhost:6800/jsonrpc') // default url
+            g_pop_rpc.showConfig('http://192.168.1.1:6800/jsonrpc') // default url
         }
     })
 })
