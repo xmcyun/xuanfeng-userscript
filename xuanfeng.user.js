@@ -118,9 +118,9 @@ $rpc.click(function (evt) {
 
     requestDownloadLinks(function (dls) {
         var config = {
-            url : localStorage.getItem('rpc-url')
-          , user: localStorage.getItem('rpc-user')
-          , pass: localStorage.getItem('rpc-pass')
+            url : localStorage.getItem('http://192.168.1.1:6800/jsonrpc')
+          , user: localStorage.getItem('')
+          , pass: localStorage.getItem('')
         }
 
         if (config.url) {
@@ -696,7 +696,7 @@ var elements    = $rpc.find('form:first').get(0).elements
 
 
 pop.showConfig = function (config) {
-    url.value = config.url || 'http://192.168.1.1:6800/jsonrpc'
+    url.value = config.url || ''
     user.value = config.user || ''
     pass.value = config.pass || ''
     this.show()
@@ -704,9 +704,9 @@ pop.showConfig = function (config) {
 
 $rpc.find('ok:first').click(function () {
     pop.hide()
-    localStorage.setItem('rpc-url', url.value)
-    localStorage.setItem('rpc-user', user.value)
-    localStorage.setItem('rpc-pass', pass.value)
+    localStorage.setItem('http://192.168.1.1:6800/jsonrpc', url.value)
+    localStorage.setItem('', user.value)
+    localStorage.setItem('', pass.value)
 })
 
 /// =====
